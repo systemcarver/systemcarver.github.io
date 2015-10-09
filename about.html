@@ -1,0 +1,56 @@
+---
+title: About
+permalink: /about/
+---
+
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <style type="text/css" media="screen">
+    .wrapper {
+        overflow: hidden;
+        position: relative;
+        height: 60%;
+        text-align: center;
+    }
+    .wrapper h1{
+        font-size: 30px;
+        color: #6f6f6f;
+    }
+    .wrapper-box {
+      margin: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+    .wrapper-img {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .wrapper p{
+        font-size: 16px;
+        color: #4f4f4f;
+    }
+    .wrapper a {
+        color: #D34848;
+    }
+
+  </style>
+  <body>
+    {% include header.html %}
+    <div class="page-content">
+      <div class="wrapper">
+          <h1>About SystemCarver</h1>
+          <div class="wrapper-box">
+            <div class="wrapper-img"><img src="/img/logo.png"></div>
+            <p>{{ site.description }}</p>
+            <p><strong>Email: </strong><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            <p><strong>Github: </strong><a target="_blank" href="https://github.com/{{ site.github_username }}">https://github.com/{{ site.github_username }}</a></p>
+          </div>
+      </div>
+
+    </div>
+    {% include footer.html %}
+
+    </script>
+  </body>
+</html>

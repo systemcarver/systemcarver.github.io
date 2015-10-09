@@ -1,0 +1,41 @@
+# Site settings
+title: SystemCarver
+email: zen-zang@outlook.com
+description: "A weblog on carving scalable web architecture and distributed systems"
+permalink: /:year/:month/:day/:title.html
+baseurl: ""
+url: "http://systemcarver.github.io"
+atom-baseurl: "http://systemcarver.github.io"
+author: "zenzang"
+github_username:  "zenzang"
+
+# Build settings
+# permalink: date
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,no_intra_emphasis,strikethrough,no_intra_emphasis,autolink,tables]
+
+# duoshuo
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : systemcarver
+
+navigations:
+  - title: About
+    class: fa fa-list-ul
+    href: /about/
+  - title: Archive
+    class: fa fa-tags
+    href: /archive/
+  - title: Categories
+    class: fa fa-user
+    href: /categories/
+  - title: Tags
+    class: fa fa-film
+    href: /tags/
+  - title: Rss
+    class: fa fa-rss
+    href: /atom.xml
