@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="post">
+    <header class="post-header">
+        <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <p class="meta">
+          <i class="fa fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}&nbsp&nbsp&nbsp
+          
+          {% if page.categories.size > 0 %}
+            <i class="fa fa-folder-open"></i>
+            {% for category in page.categories %}&nbsp&nbsp<a href="/categories/#{{ category }}">{{ category }}</a>{% endfor %}
+          {% endif %}&nbsp&nbsp&nbsp
+          
+          {% if page.tags.size > 0 %}<i class="fa fa-tags"></i>
+            {% for tag in page.tags %}&nbsp&nbsp<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}
+          {% endif %}
+        </p>
+    </header>
+    <article class="post-content">
+        {{ content }}
+    </article>
+    {% include custom/duoshuo.html %}
+</div>
